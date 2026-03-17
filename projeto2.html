@@ -12,20 +12,34 @@
 
 <h1>Edifício Residencial Contemporâneo</h1>
 
-<img src="imagens/projeto2/projeto2.png" class="imagem-projeto">
+<div class="galeria-projeto">
 
-<img src="imagens/projeto2/MAF2.png" class="imagem-projeto">
 
-<img src="imagens/projeto2/MAF3.png" class="imagem-projeto">
-
-<img src="imagens/projeto2/MAF4.png" class="imagem-projeto">
-<img src="imagens/projeto2/MAF5.png" class="imagem-projeto">
-
+<img src="imagens/projeto2/projeto2.png" onclick="abrirImagem(this.src)" class="imagem-projeto">
+<img src="imagens/projeto2/MAF2.png" onclick="abrirImagem(this.src)" class="imagem-projeto">
+<img src="imagens/projeto2/MAF3.png" onclick="abrirImagem(this.src)" class="imagem-projeto">
+<img src="imagens/projeto2/MAF4.png" onclick="abrirImagem(this.src)" class="imagem-projeto">
+<img src="imagens/projeto2/MAF5.png" onclick="abrirImagem(this.src)" class="imagem-projeto">
+</div>
 <p>
 Fachadas projetadas com foco em iluminação natural.
 </p>
 
 <a href="index.html" class="voltar">← Voltar ao portfólio</a>
 
+<div id="lightbox" onclick="fecharImagem()">
+<img id="imagem-grande">
+</div>
+
+<script>
+function abrirImagem(src){
+document.getElementById("lightbox").style.display = "flex";
+document.getElementById("imagem-grande").src = src;
+}
+
+function fecharImagem(){
+document.getElementById("lightbox").style.display = "none";
+}
+</script>
 </body>
 </html>

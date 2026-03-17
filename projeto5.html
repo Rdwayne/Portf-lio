@@ -12,11 +12,11 @@
 
 <h1>Moradia Urbana</h1>
 
-<img src="imagens/projeto5/projeto5.jpeg" class="imagem-projeto">
-
-<img src="imagens/projeto5/JVN2.png" class="imagem-projeto">
-
-<img src="imagens/projeto5/JVN3.jpeg" class="imagem-projeto">
+<div class="galeria-projeto">
+<img src="imagens/projeto5/projeto5.jpeg" onclick="abrirImagem(this.src)" class="imagem-projeto">
+<img src="imagens/projeto5/JVN2.png" onclick="abrirImagem(this.src)" class="imagem-projeto">
+<img src="imagens/projeto5/JVN3.jpeg" onclick="abrirImagem(this.src)" class="imagem-projeto">
+</div>
 
 <p>
 Projeto residencial garantindo conforto e modernidade.
@@ -24,5 +24,19 @@ Projeto residencial garantindo conforto e modernidade.
 
 <a href="index.html" class="voltar">← Voltar ao portfólio</a>
 
+<div id="lightbox" onclick="fecharImagem()">
+<img id="imagem-grande">
+</div>
+
+<script>
+function abrirImagem(src){
+document.getElementById("lightbox").style.display = "flex";
+document.getElementById("imagem-grande").src = src;
+}
+
+function fecharImagem(){
+document.getElementById("lightbox").style.display = "none";
+}
+</script>
 </body>
 </html>

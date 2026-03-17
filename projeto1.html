@@ -16,24 +16,38 @@
 
 <h1>Casa Moderna Minimalista</h1>
 
-<h1>Casa Moderna Minimalista</h1>
 
 <p>Projeto residencial com foco em conforto e sustentabilidade.</p>
 
-<img src="imagens/projeto1/projeto1.png" class="imagem-projeto">
+<div class="galeria-projeto"></div>
 
-<img src="imagens/projeto1/fachada2.png" class="imagem-projeto">
-
-<img src="imagens/projeto1/fachada3.png" class="imagem-projeto">
-
-<img src="imagens/projeto1/fachada4.png" class="imagem-projeto">
-<img src="imagens/projeto1/fachada5.png" class="imagem-projeto">
+<img src="imagens/projeto1/projeto1.png" onclick="abrirImagem(this.src)" class="imagem-projeto">
+<img src="imagens/projeto1/fachada2.png" onclick="abrirImagem(this.src)" class="imagem-projeto">
+<img src="imagens/projeto1/fachada3.png" onclick="abrirImagem(this.src)" class="imagem-projeto">
+<img src="imagens/projeto1/fachada4.png" onclick="abrirImagem(this.src)" class="imagem-projeto">
+<img src="imagens/projeto1/fachada5.png" onclick="abrirImagem(this.src)" class="imagem-projeto">
 <p>
+
+    </div>
 Projeto residencial moderno com foco no conforto e na sustentabilidade.
 </p>
 
 <a href="index.html">← Voltar ao portfólio</a>
 
+<div id="lightbox" onclick="fecharImagem()">
+<img id="imagem-grande">
+</div>
+
+<script>
+function abrirImagem(src){
+document.getElementById("lightbox").style.display = "flex";
+document.getElementById("imagem-grande").src = src;
+}
+
+function fecharImagem(){
+document.getElementById("lightbox").style.display = "none";
+}
+</script>
 </body>
 
 </html>
